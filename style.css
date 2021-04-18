@@ -3,6 +3,10 @@ body{
   color: #AEAEAE;
   background-color: #131314;
   height: 100%;
+  cursor: default;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 p{margin: 0;}
 
@@ -39,6 +43,11 @@ p{margin: 0;}
 /* ------------------------- */
 .info-block{
   padding: 0.5rem 1.5rem !important;
+  border: 1.5px solid #1E1E1E;
+  transition: 150ms all ease-in;
+}
+.info-block:hover{
+  border: 1.5px solid orange;
 }
 .ellipse{
   display: block;
