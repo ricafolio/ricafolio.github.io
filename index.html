@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Primary Meta Tags -->
     <title>Rica Mae Ombrog — Designer & Developer</title>
     <meta name="title" content="Rica Mae Ombrog — Designer & Developer">
     <meta name="description" content="Rica is a Junior Designer from Philippines specializing in UI/UX Design and Web development.">
@@ -13,44 +12,50 @@
     <meta property="og:description" content="Rica is a Junior Designer from Philippines specializing in UI/UX Design and Web development.">
     <meta property="og:image" content="/og.jpg">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:url" content="https://ricafolio.me/">
     <meta property="twitter:title" content="Rica Mae Ombrog — Designer & Developer">
     <meta property="twitter:description" content="Rica is a Junior Designer from Philippines specializing in UI/UX Design and Web development.">
     <meta property="twitter:image" content="/og.jpg">
-    <meta name="theme-color" content="#0026ff"> 
-    <style>
-        body{
-            background-color: #1300EF;    
-            height: 90vh;
-        }
-        .img{
-            display: block;
-            -ms-flex: 0 0 auto;
-            -webkit-flex: 0 0 auto;
-            flex: 0 0 auto;
-            max-width: 100%;
-            height: auto;
-            width: 100%;
-            *width: auto;
-        }
-        .centered{
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-        }
-    </style>
+    <meta name="theme-color" content="#131314">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reflex-grid/css/reflex.min.css">
+    <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
     <div class="centered">
-        <img src="/og.jpg" class="img" alt="Ricafolio banner" style="max-width: 800px;"/>
+        <div class="time-date-block">
+            <p id="clock">00:00</p>
+            <p id="date">Sunday, 01 January</p>
+            <script>
+                const d = new Date();
+                const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                document.getElementById("clock").innerHTML = d.getHours().toString() + ':' + d.getMinutes().toString();
+                document.getElementById("date").innerHTML = dayNames[d.getDay()].toString() + ', ' + d.getDate().toString() + ' ' + monthNames[d.getMonth()].toString();
+            </script>
+        </div>
+
+        <div class="block info-block">
+            <div class="grid">
+                <div class="col-3 left-block">
+                    <div class="ellipse">
+                        <span>RO</span>
+                    </div>
+                </div>
+                <div class="col-9 right-block">
+                    <div class="name-block">
+                        <p class="name-title">
+                            Rica Mae Ombrog
+                        </p>
+                        <p class="name-subtitle">
+                            Web Designer & Developer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
